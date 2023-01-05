@@ -7,8 +7,10 @@ int main() {
     int rows, cols;
     cout << "Enter the size of the matrix\n";
     cin >> rows >> cols;
+    int* ptrRows = &rows;
+    int* ptrCols = &cols;
     // Matrix inputs
-    int arr[rows][cols];
+    int arr[*ptrRows][*ptrCols];
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
             cin >> arr[i][j];
